@@ -1,1 +1,469 @@
-Test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Coffee Fortune Teller - Discover Your Destiny in Your Cup</title>
+    <meta name="description" content="Transform your daily coffee ritual into a mystical experience. Our AI-powered app reads coffee patterns to reveal your fortune. Available on iOS and Android.">
+    <meta name="keywords" content="coffee fortune, AI fortune teller, coffee reading, mystical app, daily fortune, coffee patterns">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coffeefortune.app/">
+    <meta property="og:title" content="Daily Coffee Fortune Teller - Discover Your Destiny in Your Cup">
+    <meta property="og:description" content="Transform your daily coffee ritual into a mystical experience. Our AI-powered app reads coffee patterns to reveal your fortune.">
+    <meta property="og:image" content="https://coffeefortune.app/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://coffeefortune.app/">
+    <meta property="twitter:title" content="Daily Coffee Fortune Teller - Discover Your Destiny in Your Cup">
+    <meta property="twitter:description" content="Transform your daily coffee ritual into a mystical experience. Our AI-powered app reads coffee patterns to reveal your fortune.">
+    <meta property="twitter:image" content="https://coffeefortune.app/assets/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="assets/favicon-32x32.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="assets/favicon-16x16.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-icon">☕</span>
+                <span class="nav-title">Coffee Fortune</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#download" class="nav-link nav-cta">Download</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-pattern"></div>
+            <div class="floating-elements">
+                <div class="floating-element">☕</div>
+                <div class="floating-element">✨</div>
+                <div class="floating-element">🔮</div>
+                <div class="floating-element">☕</div>
+                <div class="floating-element">✨</div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-main">Discover Your Destiny</span>
+                    <span class="hero-title-sub">in Every Cup</span>
+                </h1>
+                <p class="hero-description">
+                    Transform your daily coffee ritual into a mystical experience. 
+                    Our AI-powered app reads the unique patterns in your coffee cup 
+                    to reveal personalized fortunes and insights.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Fortunes Read</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.8★</span>
+                        <span class="stat-label">App Rating</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Happy Users</span>
+                    </div>
+                </div>
+                <div class="hero-buttons" id="download">
+                    <a href="#" class="app-store-btn ios-btn">
+                        <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+                    </a>
+                    <a href="#" class="app-store-btn android-btn">
+                        <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-demo">
+                            <div class="demo-frame active" data-demo="0">
+                                <div class="demo-header">
+                                    <span class="demo-title">☕ Coffee Fortune</span>
+                                </div>
+                                <div class="demo-content">
+                                    <div class="coffee-cup">☕</div>
+                                    <p>Take a photo of your coffee</p>
+                                </div>
+                            </div>
+                            <div class="demo-frame" data-demo="1">
+                                <div class="demo-header">
+                                    <span class="demo-title">🔮 Analyzing...</span>
+                                </div>
+                                <div class="demo-content">
+                                    <div class="loading-animation"></div>
+                                    <p>AI is reading your coffee patterns</p>
+                                </div>
+                            </div>
+                            <div class="demo-frame" data-demo="2">
+                                <div class="demo-header">
+                                    <span class="demo-title">✨ Your Fortune</span>
+                                </div>
+                                <div class="demo-content">
+                                    <div class="fortune-card">
+                                        <p>"Creative opportunities await you this week. Trust your intuition."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Mystical Features</h2>
+                <p class="section-description">
+                    Experience the magic of coffee fortune telling with cutting-edge AI technology
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">AI-Powered Analysis</h3>
+                    <p class="feature-description">
+                        Advanced computer vision analyzes coffee patterns, foam formations, 
+                        and cup characteristics to generate personalized readings.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">📸</div>
+                    <h3 class="feature-title">Simple Photo Capture</h3>
+                    <p class="feature-description">
+                        Just snap a photo of your coffee cup and let our AI do the rest. 
+                        Works with any coffee - espresso, latte, cappuccino, or black coffee.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">🔮</div>
+                    <h3 class="feature-title">Daily Fortunes</h3>
+                    <p class="feature-description">
+                        Receive unique, personalized fortune readings every day. 
+                        Each reading is crafted specifically for your coffee's patterns.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">📚</div>
+                    <h3 class="feature-title">Fortune History</h3>
+                    <p class="feature-description">
+                        Keep track of all your readings with our comprehensive history feature. 
+                        See how your fortunes unfold over time.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">📤</div>
+                    <h3 class="feature-title">Share Your Fortune</h3>
+                    <p class="feature-description">
+                        Share your mystical readings with friends and family through 
+                        social media, messaging, or save them to your photos.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-title">Premium Insights</h3>
+                    <p class="feature-description">
+                        Upgrade to unlock unlimited daily readings, detailed analysis, 
+                        and premium fortune interpretations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">
+                    Three simple steps to unlock the mysteries in your coffee cup
+                </p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Take a Photo</h3>
+                        <p class="step-description">
+                            Open the app and capture a clear photo of your coffee cup. 
+                            Make sure the coffee surface and any patterns are visible.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon">📸</div>
+                    </div>
+                </div>
+                
+                <div class="step step-reverse" data-aos="fade-left" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">AI Analysis</h3>
+                        <p class="step-description">
+                            Our advanced AI examines coffee grounds, foam patterns, 
+                            cup characteristics, and mystical elements to interpret your fortune.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon">🔍</div>
+                    </div>
+                </div>
+                
+                <div class="step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Receive Your Fortune</h3>
+                        <p class="step-description">
+                            Get your personalized fortune reading with insights about 
+                            love, career, health, and spiritual guidance for your day.
+                        </p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-icon">✨</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Fortunes Section -->
+    <section class="sample-fortunes">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sample Fortunes</h2>
+                <p class="section-description">
+                    See the kind of mystical insights our app reveals
+                </p>
+            </div>
+            
+            <div class="fortunes-carousel">
+                <div class="fortune-card-large active" data-fortune="0">
+                    <div class="fortune-header">
+                        <span class="fortune-type">🌟 Career & Success</span>
+                        <span class="fortune-date">Today</span>
+                    </div>
+                    <p class="fortune-text">
+                        "The swirls in your coffee speak of new opportunities on the horizon. 
+                        A creative project will bring unexpected recognition. Trust your instincts 
+                        when making important decisions this week."
+                    </p>
+                    <div class="fortune-confidence">Confidence: 92%</div>
+                </div>
+                
+                <div class="fortune-card-large" data-fortune="1">
+                    <div class="fortune-header">
+                        <span class="fortune-type">💖 Love & Relationships</span>
+                        <span class="fortune-date">Today</span>
+                    </div>
+                    <p class="fortune-text">
+                        "The heart-shaped foam in your cup reveals that meaningful connections 
+                        are strengthening. An old friend may reach out with surprising news. 
+                        Open your heart to new possibilities."
+                    </p>
+                    <div class="fortune-confidence">Confidence: 88%</div>
+                </div>
+                
+                <div class="fortune-card-large" data-fortune="2">
+                    <div class="fortune-header">
+                        <span class="fortune-type">🧘 Spiritual Growth</span>
+                        <span class="fortune-date">Today</span>
+                    </div>
+                    <p class="fortune-text">
+                        "The coffee grounds form a path of enlightenment. Meditation and 
+                        quiet reflection will bring clarity to a situation that has been 
+                        troubling you. Inner peace awaits."
+                    </p>
+                    <div class="fortune-confidence">Confidence: 95%</div>
+                </div>
+            </div>
+            
+            <div class="fortune-dots">
+                <button class="dot active" data-target="0"></button>
+                <button class="dot" data-target="1"></button>
+                <button class="dot" data-target="2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Users Say</h2>
+                <p class="section-description">
+                    Join thousands of coffee lovers discovering their daily fortunes
+                </p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "I've been using this app for months and I'm amazed by how accurate 
+                        the readings are! It's become part of my morning routine."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah M.</span>
+                            <span class="author-title">Coffee Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "The AI analysis is incredible! It picks up on details in my coffee 
+                        that I never noticed. The fortunes are surprisingly insightful."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <span class="author-name">Michael R.</span>
+                            <span class="author-title">Tech Professional</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">
+                        "Such a fun and unique app! My friends and I love sharing our 
+                        daily fortunes. The premium features are totally worth it."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">E</div>
+                        <div class="author-info">
+                            <span class="author-name">Emma L.</span>
+                            <span class="author-title">Marketing Manager</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Discover Your Fortune?</h2>
+                <p class="cta-description">
+                    Join thousands of coffee lovers who start their day with mystical insights. 
+                    Download the app now and reveal what your coffee has to say about your future.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#" class="app-store-btn ios-btn">
+                        <img src="assets/app-store-badge.svg" alt="Download on the App Store">
+                    </a>
+                    <a href="#" class="app-store-btn android-btn">
+                        <img src="assets/google-play-badge.svg" alt="Get it on Google Play">
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <span class="cta-feature">✓ Free to download</span>
+                    <span class="cta-feature">✓ Daily free readings</span>
+                    <span class="cta-feature">✓ Premium features available</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="footer-icon">☕</span>
+                        <span class="footer-title">Coffee Fortune</span>
+                    </div>
+                    <p class="footer-description">
+                        Discover the mysteries hidden in your daily coffee ritual with 
+                        AI-powered fortune readings.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4 class="footer-heading">App</h4>
+                        <a href="#features" class="footer-link">Features</a>
+                        <a href="#how-it-works" class="footer-link">How It Works</a>
+                        <a href="#" class="footer-link">Premium</a>
+                        <a href="#" class="footer-link">Support</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 class="footer-heading">Company</h4>
+                        <a href="#" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">Contact</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4 class="footer-heading">Connect</h4>
+                        <a href="#" class="footer-link">Instagram</a>
+                        <a href="#" class="footer-link">Twitter</a>
+                        <a href="#" class="footer-link">Facebook</a>
+                        <a href="#" class="footer-link">TikTok</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2024 Daily Coffee Fortune Teller. All rights reserved.
+                </p>
+                <div class="footer-badges">
+                    <span class="footer-badge">Made with ❤️ for coffee lovers</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
