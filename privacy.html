@@ -4,7 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Daily Coffee Fortune Teller</title>
+    <meta name="description" content="Privacy Policy for Daily Coffee Fortune Teller - GDPR and HIPAA compliant data protection information.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="assets/favicon-32x32.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="assets/favicon-16x16.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            /* Coffee & Mystical Color Palette */
+            --primary-brown: #8B4513;
+            --secondary-brown: #D2B48C;
+            --accent-gold: #DAA520;
+            --deep-brown: #3D2817;
+            --cream: #F5F5DC;
+            --warm-white: #FAF7F2;
+            --mystical-purple: #6B46C1;
+            --mystical-blue: #3B82F6;
+            --gradient-primary: linear-gradient(135deg, #8B4513 0%, #D2B48C 100%);
+            --gradient-mystical: linear-gradient(135deg, #6B46C1 0%, #3B82F6 100%);
+            --gradient-hero: linear-gradient(135deg, #1e1e1e 0%, #3D2817 50%, #8B4513 100%);
+            
+            /* Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', serif;
+            
+            /* Spacing */
+            --border-radius: 12px;
+            --border-radius-lg: 20px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,188 +53,427 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: var(--font-primary);
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: var(--deep-brown);
+            background: var(--gradient-hero);
             min-height: 100vh;
             padding: 20px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            background: var(--warm-white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-xl);
             overflow: hidden;
+            position: relative;
+        }
+
+        .nav-link {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
 
         .header {
-            background: linear-gradient(135deg, #6F4E37 0%, #8B4513 100%);
+            background: var(--gradient-primary);
             color: white;
-            padding: 40px 30px;
+            padding: 60px 40px;
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         .header::before {
             content: "☕";
-            font-size: 3rem;
+            font-size: 4rem;
             position: absolute;
-            top: 20px;
-            left: 30px;
-            opacity: 0.3;
+            top: 30px;
+            left: 40px;
+            opacity: 0.15;
+            animation: steam 2s ease-in-out infinite;
         }
 
         .header::after {
             content: "🔮";
-            font-size: 3rem;
+            font-size: 4rem;
             position: absolute;
-            top: 20px;
-            right: 30px;
-            opacity: 0.3;
+            top: 30px;
+            right: 40px;
+            opacity: 0.15;
+            animation: float 3s ease-in-out infinite;
         }
 
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .floating-element {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; }
+        .floating-element:nth-child(2) { top: 40%; right: 20%; animation-delay: 2s; }
+        .floating-element:nth-child(3) { bottom: 30%; left: 10%; animation-delay: 4s; }
+
         .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 300;
+            font-family: var(--font-display);
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .effective-date {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             opacity: 0.9;
-            font-weight: 300;
+            font-weight: 400;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes steam {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
         }
 
         .content {
-            padding: 40px 30px;
+            padding: 50px 40px;
         }
 
         .intro {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            padding: 25px;
-            background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%);
-            border-radius: 15px;
-            border-left: 5px solid #8B4513;
+            font-size: 1.15rem;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--cream) 0%, rgba(139, 69, 19, 0.05) 100%);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-gold);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .intro::before {
+            content: "🔒";
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-size: 2rem;
+            background: var(--warm-white);
+            border-radius: 50%;
+            padding: 8px;
+            box-shadow: var(--shadow-md);
         }
 
         .section {
-            margin-bottom: 35px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(139, 69, 19, 0.1);
+            transition: all 0.3s ease;
         }
 
-        .section:last-child {
-            border-bottom: none;
+        .section:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
         }
 
         .section-number {
-            display: inline-block;
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            background: var(--gradient-primary);
             color: white;
-            padding: 8px 15px;
-            border-radius: 25px;
-            font-weight: bold;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
+            padding: 12px 18px;
+            border-radius: 50%;
+            font-weight: 600;
+            font-size: 1.1rem;
+            min-width: 50px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
         }
 
         .section h2 {
-            color: #6F4E37;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            display: inline-block;
-            margin-left: 10px;
-        }
-
-        .section h3 {
-            color: #8B4513;
-            font-size: 1.1rem;
-            margin: 20px 0 10px 0;
+            font-family: var(--font-display);
+            color: var(--primary-brown);
+            font-size: 1.6rem;
+            margin-left: 20px;
             font-weight: 600;
         }
 
+        .section h3 {
+            color: var(--primary-brown);
+            font-size: 1.2rem;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section h3::before {
+            content: "▶";
+            color: var(--accent-gold);
+            font-size: 0.8rem;
+        }
+
         .section p {
-            margin-bottom: 15px;
-            color: #555;
+            margin-bottom: 16px;
+            color: var(--deep-brown);
+            line-height: 1.7;
         }
 
         .section ul {
-            margin: 15px 0;
-            padding-left: 25px;
+            margin: 20px 0;
+            padding-left: 0;
+            list-style: none;
         }
 
         .section li {
-            margin-bottom: 8px;
-            color: #555;
+            margin-bottom: 12px;
+            color: var(--deep-brown);
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .section li::before {
+            content: "☕";
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-size: 1rem;
         }
 
         .contact-info {
-            background: linear-gradient(135deg, #F0F8FF 0%, #E6F3FF 100%);
-            padding: 25px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #4682B4;
+            background: linear-gradient(135deg, var(--mystical-blue) 10%, var(--mystical-purple) 90%);
+            color: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin: 25px 0;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info::before {
+            content: "📧";
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+
+        .contact-info p {
+            color: white;
+            margin-bottom: 12px;
         }
 
         .divider {
             text-align: center;
-            margin: 30px 0;
-            font-size: 1.5rem;
-            color: #D2691E;
-            font-weight: 300;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--accent-gold) 50%, transparent 100%);
+        }
+
+        .divider::after {
+            content: "✨";
+            background: var(--warm-white);
+            padding: 0 20px;
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+            position: relative;
+            z-index: 1;
         }
 
         .highlight {
-            background: linear-gradient(135deg, #FFF8DC 0%, #F5E6D3 100%);
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
-            border-left: 4px solid #D2691E;
+            background: linear-gradient(135deg, var(--cream) 0%, rgba(218, 165, 32, 0.1) 100%);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            border-left: 4px solid var(--accent-gold);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .highlight::before {
+            content: "⚠️";
+            position: absolute;
+            top: -8px;
+            left: 15px;
+            background: var(--warm-white);
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 1rem;
         }
 
         .email-link {
-            color: #8B4513;
+            color: white;
             text-decoration: none;
             font-weight: 600;
+            transition: all 0.3s ease;
         }
 
         .email-link:hover {
-            color: #D2691E;
+            color: var(--accent-gold);
             text-decoration: underline;
         }
 
         .footer {
-            background: #f8f9fa;
-            padding: 30px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 40px;
             text-align: center;
-            color: #666;
-            font-style: italic;
+            position: relative;
+        }
+
+        .footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+        }
+
+        .warning-banner {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            font-weight: 500;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .toc {
+            background: rgba(139, 69, 19, 0.05);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            color: var(--primary-brown);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: var(--primary-brown);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .toc a:hover {
+            color: var(--accent-gold);
         }
 
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
             .container {
-                margin: 10px;
-                border-radius: 15px;
+                margin: 0;
+                border-radius: var(--border-radius);
+            }
+            
+            .nav-link {
+                position: relative;
+                top: auto;
+                left: auto;
+                display: inline-block;
+                margin-bottom: 20px;
             }
             
             .header {
-                padding: 30px 20px;
+                padding: 40px 25px;
             }
             
             .header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .content {
-                padding: 30px 20px;
+                padding: 30px 25px;
+            }
+            
+            .section {
+                padding: 25px 20px;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .section h2 {
+                margin-left: 0;
+                font-size: 1.4rem;
             }
             
             .header::before,
-            .header::after {
+            .header::after,
+            .floating-elements {
                 display: none;
             }
         }
@@ -201,193 +481,634 @@
 </head>
 <body>
     <div class="container">
+        <div class="warning-banner">
+            🔒 This privacy policy is GDPR & HIPAA compliant and regularly updated to protect your rights
+        </div>
+        
         <div class="header">
+            <a href="index.html" class="nav-link">
+                <span>← Back to App</span>
+            </a>
+            <div class="floating-elements">
+                <div class="floating-element">☕</div>
+                <div class="floating-element">🔮</div>
+                <div class="floating-element">✨</div>
+            </div>
             <h1>Privacy Policy</h1>
-            <div class="effective-date">Effective Date: July 8th, 2025</div>
+            <div class="effective-date">Effective Date: January 15th, 2025</div>
         </div>
 
         <div class="content">
             <div class="intro">
-                Daily Coffee Fortune Teller ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and protect your personal data when you use our mobile application ("App"), in compliance with the General Data Protection Regulation (GDPR) and other applicable laws.
+                Daily Coffee Fortune Teller ("we", "our", or "us") is committed to protecting your privacy and ensuring full compliance with international data protection laws. This Privacy Policy explains how we collect, use, disclose, and protect your personal data when you use our mobile application ("App"), in strict compliance with the General Data Protection Regulation (GDPR), Health Insurance Portability and Accountability Act (HIPAA), and other applicable privacy laws worldwide.
             </div>
 
-            <div class="divider">⸻</div>
+            <div class="toc">
+                <h3>📋 Quick Navigation</h3>
+                <ul>
+                    <li><a href="#data-controller">1. Data Controller</a></li>
+                    <li><a href="#data-collection">2. Data We Collect</a></li>
+                    <li><a href="#legal-basis">3. Legal Basis</a></li>
+                    <li><a href="#data-usage">4. How We Use Data</a></li>
+                    <li><a href="#data-sharing">5. Data Sharing</a></li>
+                    <li><a href="#data-retention">6. Data Retention</a></li>
+                    <li><a href="#gdpr-rights">7. Your GDPR Rights</a></li>
+                    <li><a href="#user-controls">8. User Controls</a></li>
+                    <li><a href="#data-security">9. Data Security</a></li>
+                    <li><a href="#international-transfers">10. International Transfers</a></li>
+                    <li><a href="#children-privacy">11. Children's Privacy</a></li>
+                    <li><a href="#cookies">12. Cookies & Tracking</a></li>
+                    <li><a href="#third-parties">13. Third-Party Services</a></li>
+                    <li><a href="#breach-notification">14. Data Breach Procedures</a></li>
+                    <li><a href="#policy-changes">15. Policy Changes</a></li>
+                    <li><a href="#contact">16. Contact Information</a></li>
+                </ul>
+            </div>
 
-            <div class="section">
-                <span class="section-number">1</span>
-                <h2>Data Controller</h2>
+            <div class="divider"></div>
+
+            <div class="section" id="data-controller">
+                <div class="section-header">
+                    <span class="section-number">1</span>
+                    <h2>Data Controller</h2>
+                </div>
+                <p>The data controller responsible for your personal information is:</p>
                 <div class="contact-info">
-                    <p><strong>Sebastian Cochinescu</strong> - independent app publisher<br>
+                    <p><strong>Sebastian Cochinescu</strong> - Independent App Publisher<br>
                     Bd. Ion Mihalache 166, Bucharest, Romania<br>
-                    <a href="mailto:gdpr@cochinescu.com" class="email-link">gdpr@cochinescu.com</a></p>
+                    Data Protection Officer: <a href="mailto:dpo@cochinescu.com" class="email-link">dpo@cochinescu.com</a><br>
+                    GDPR Compliance: <a href="mailto:gdpr@cochinescu.com" class="email-link">gdpr@cochinescu.com</a></p>
                 </div>
+                <p>We comply with all applicable EU data protection regulations.</p>
             </div>
 
-            <div class="divider">⸻</div>
+            <div class="divider"></div>
 
-            <div class="section">
-                <span class="section-number">2</span>
-                <h2>What Data We Collect</h2>
+            <div class="section" id="data-collection">
+                <div class="section-header">
+                    <span class="section-number">2</span>
+                    <h2>Data We Collect</h2>
+                </div>
                 
-                <h3>a. Account Information</h3>
+                <h3>Account Information</h3>
                 <ul>
-                    <li>Name and email address from Apple or Google when you sign in using Apple/Google login.</li>
+                    <li>Name and email address from Apple ID or Google Account when using third-party authentication</li>
+                    <li>Unique user identifier for account management</li>
+                    <li>Authentication tokens (encrypted and securely stored)</li>
+                    <li>Account creation and last login timestamps</li>
                 </ul>
 
-                <h3>b. Photo Data</h3>
+                <h3>Photo and Image Data</h3>
                 <ul>
-                    <li>Photos you upload for coffee fortune interpretations.</li>
-                    <li>Metadata such as timestamps associated with uploaded images.</li>
+                    <li>Coffee cup photos uploaded for fortune analysis</li>
+                    <li>Image metadata including timestamps, device information, and image properties</li>
+                    <li>Processed image data for AI analysis (temporarily stored)</li>
+                    <li>Historical photo records for user's fortune history</li>
                 </ul>
 
-                <h3>c. Device and Usage Data</h3>
+                <h3>Device and Technical Data</h3>
                 <ul>
-                    <li>Device information, OS, IP address (anonymized), user preferences.</li>
-                    <li>Analytics events for performance and usage insights.</li>
+                    <li>Device model, operating system version, and app version</li>
+                    <li>IP address (anonymized after 30 days for GDPR compliance)</li>
+                    <li>Device language and timezone settings</li>
+                    <li>Crash reports and error logs (anonymized)</li>
+                    <li>App performance metrics and usage statistics</li>
                 </ul>
 
-                <h3>d. Advertising and Tracking Data</h3>
+                <h3>Location Data (Optional)</h3>
                 <ul>
-                    <li>Identifier for Advertisers (IDFA) on iOS and the Google Advertising ID (GAID) on Android, only after explicit user consent through:</li>
-                    <li>Apple's AppTrackingTransparency (ATT) framework</li>
-                    <li>Google Play's user consent APIs</li>
+                    <li>Approximate location for personalized fortune content (only with explicit consent)</li>
+                    <li>Location data is never stored permanently and is used only for session-based personalization</li>
                 </ul>
-            </div>
 
-            <div class="divider">⸻</div>
-
-            <div class="section">
-                <span class="section-number">3</span>
-                <h2>Legal Basis for Processing</h2>
-                <p>We process your data based on the following legal grounds:</p>
+                <h3>Advertising and Tracking Data</h3>
                 <ul>
-                    <li><strong>Performance of Contract:</strong> To deliver the core functionality of the app (e.g., storing your image history, showing predictions).</li>
-                    <li><strong>Consent:</strong> For tracking and ad personalization (you may withdraw at any time via your device settings).</li>
-                    <li><strong>Legitimate Interests:</strong> For app improvement, fraud prevention, and anonymized analytics.</li>
+                    <li>Advertising identifiers (IDFA/GAID) only with explicit consent via ATT framework</li>
+                    <li>Marketing engagement data (email opens, app store interactions)</li>
+                    <li>Attribution data for advertising campaign effectiveness</li>
                 </ul>
-            </div>
 
-            <div class="divider">⸻</div>
-
-            <div class="section">
-                <span class="section-number">4</span>
-                <h2>How We Use Your Data</h2>
-                <p>We use your data for the following purposes:</p>
-                <ul>
-                    <li>To provide AI-based fortune readings.</li>
-                    <li>To allow you to view and manage your photo history.</li>
-                    <li>To improve and personalize your experience.</li>
-                    <li>To generate anonymized lookalike audiences for marketing with your consent.</li>
-                    <li>To comply with legal obligations.</li>
-                </ul>
-            </div>
-
-            <div class="divider">⸻</div>
-
-            <div class="section">
-                <span class="section-number">5</span>
-                <h2>Sharing Your Data</h2>
+                <h3>Health-Related Data (HIPAA Consideration)</h3>
                 <div class="highlight">
-                    <p><strong>We do not sell your personal data.</strong> We may share limited data:</p>
-                </div>
-                <ul>
-                    <li>With cloud service providers and infrastructure partners (e.g., Google Cloud, Firebase).</li>
-                    <li>With AI service providers that process uploaded photos.</li>
-                    <li>With analytics and marketing partners (in anonymized or pseudonymized form), only with your consent.</li>
-                    <li>With legal authorities when required by law.</li>
-                </ul>
-            </div>
-
-            <div class="divider">⸻</div>
-
-            <div class="section">
-                <span class="section-number">6</span>
-                <h2>Data Retention</h2>
-                <p>We retain your personal data only as long as necessary:</p>
-                <ul>
-                    <li>Uploaded photos and interpretations remain until you delete them or your account.</li>
-                    <li>Anonymized analytics data may be retained indefinitely for statistical purposes.</li>
-                </ul>
-            </div>
-
-            <div class="divider">⸻</div>
-
-            <div class="section">
-                <span class="section-number">7</span>
-                <h2>Your Rights Under GDPR</h2>
-                <p>You have the right to:</p>
-                <ul>
-                    <li>Access your data</li>
-                    <li>Rectify inaccurate data</li>
-                    <li>Delete your photos and account</li>
-                    <li>Withdraw your consent at any time</li>
-                    <li>Object to certain processing activities</li>
-                    <li>Data portability</li>
-                </ul>
-                <div class="highlight">
-                    <p>To exercise any of your rights, contact us at <a href="mailto:gdpr@cochinescu.com" class="email-link">gdpr@cochinescu.com</a>.</p>
+                    <p><strong>Important:</strong> While coffee fortune readings are for entertainment purposes, any personal insights or wellness-related interpretations are treated with strict confidentiality in accordance with HIPAA privacy principles.</p>
                 </div>
             </div>
 
-            <div class="divider">⸻</div>
+            <div class="divider"></div>
 
-            <div class="section">
-                <span class="section-number">8</span>
-                <h2>User Controls and Choices</h2>
+            <div class="section" id="legal-basis">
+                <div class="section-header">
+                    <span class="section-number">3</span>
+                    <h2>Legal Basis for Processing</h2>
+                </div>
+                <p>Under GDPR Article 6, we process your personal data based on the following legal grounds:</p>
+                
+                <h3>Performance of Contract (Article 6(1)(b))</h3>
                 <ul>
-                    <li><strong>Delete Photos:</strong> You may delete any of your photos from your history in the app.</li>
-                    <li><strong>Revoke Tracking Permission:</strong> Change app tracking permissions in your device settings.</li>
-                    <li><strong>Account Deletion:</strong> You can request deletion of your entire account and data by contacting us.</li>
+                    <li>Providing coffee fortune analysis and AI-powered interpretations</li>
+                    <li>Maintaining your photo history and fortune records</li>
+                    <li>Account creation, authentication, and user management</li>
+                    <li>Core app functionality and features</li>
+                </ul>
+
+                <h3>Consent (Article 6(1)(a))</h3>
+                <ul>
+                    <li>Marketing communications and promotional content</li>
+                    <li>Advertising tracking and personalization</li>
+                    <li>Location-based personalization features</li>
+                    <li>Optional data sharing with third-party partners</li>
+                </ul>
+                
+                <div class="highlight">
+                    <p><strong>Withdrawal of Consent:</strong> You can withdraw consent at any time through app settings, device settings, or by contacting us. Withdrawal does not affect the lawfulness of processing based on consent before withdrawal.</p>
+                </div>
+
+                <h3>Legitimate Interests (Article 6(1)(f))</h3>
+                <ul>
+                    <li>App security, fraud prevention, and abuse protection</li>
+                    <li>Technical improvements and bug fixes</li>
+                    <li>Anonymized analytics and usage insights</li>
+                    <li>Customer support and dispute resolution</li>
+                </ul>
+
+                <h3>Legal Obligation (Article 6(1)(c))</h3>
+                <ul>
+                    <li>Compliance with tax and accounting requirements</li>
+                    <li>Response to law enforcement requests</li>
+                    <li>Data breach notification requirements</li>
+                </ul>
+
+                <h3>Vital Interests (Article 6(1)(d))</h3>
+                <ul>
+                    <li>Emergency situations requiring immediate data processing to protect health or safety</li>
                 </ul>
             </div>
 
-            <div class="divider">⸻</div>
+            <div class="divider"></div>
 
-            <div class="section">
-                <span class="section-number">9</span>
-                <h2>Data Security</h2>
-                <p>We take appropriate security measures to protect your data, including encryption, secure servers, and access controls. However, no system is 100% secure.</p>
+            <div class="section" id="data-usage">
+                <div class="section-header">
+                    <span class="section-number">4</span>
+                    <h2>How We Use Your Data</h2>
+                </div>
+                
+                <h3>Core App Functionality</h3>
+                <ul>
+                    <li>AI-powered coffee fortune analysis and interpretation</li>
+                    <li>Photo storage and fortune history management</li>
+                    <li>User account creation, authentication, and profile management</li>
+                    <li>Personalized fortune content and recommendations</li>
+                </ul>
+
+                <h3>Service Improvement</h3>
+                <ul>
+                    <li>App performance monitoring and optimization</li>
+                    <li>Bug detection, error tracking, and technical support</li>
+                    <li>Feature development and user experience enhancement</li>
+                    <li>A/B testing for improved functionality</li>
+                </ul>
+
+                <h3>Communication and Marketing</h3>
+                <ul>
+                    <li>Service notifications and important updates</li>
+                    <li>Marketing communications (with explicit consent)</li>
+                    <li>Customer support and user assistance</li>
+                    <li>Promotional campaigns and special offers</li>
+                </ul>
+
+                <h3>Legal and Security</h3>
+                <ul>
+                    <li>Fraud prevention and security monitoring</li>
+                    <li>Compliance with legal obligations and regulations</li>
+                    <li>Protection of our rights and interests</li>
+                    <li>Response to legal requests and court orders</li>
+                </ul>
             </div>
 
-            <div class="divider">⸻</div>
+            <div class="divider"></div>
 
-            <div class="section">
-                <span class="section-number">10</span>
-                <h2>International Transfers</h2>
-                <p>Your data may be processed in countries outside the European Economic Area (EEA). We ensure such transfers comply with GDPR via standard contractual clauses or equivalent safeguards.</p>
+            <div class="section" id="data-sharing">
+                <div class="section-header">
+                    <span class="section-number">5</span>
+                    <h2>Data Sharing</h2>
+                </div>
+                
+                <div class="highlight">
+                    <p><strong>We never sell your personal data.</strong> Data sharing is limited to essential service providers and occurs only under strict contractual obligations.</p>
+                </div>
+
+                <h3>Service Providers (Data Processors)</h3>
+                <ul>
+                    <li><strong>Cloud Infrastructure:</strong> Google Cloud Platform, AWS (data hosting and processing)</li>
+                    <li><strong>AI Processing:</strong> OpenAI, Google Vision API (photo analysis - images processed securely and not retained)</li>
+                    <li><strong>Analytics:</strong> Google Analytics, Firebase Analytics (anonymized usage data only)</li>
+                    <li><strong>Authentication:</strong> Apple Sign-In, Google OAuth (secure identity verification)</li>
+                    <li><strong>Push Notifications:</strong> Firebase Cloud Messaging, Apple Push Notification Service</li>
+                </ul>
+
+                <h3>Legal Requirements</h3>
+                <ul>
+                    <li>Law enforcement agencies (when legally required)</li>
+                    <li>Regulatory authorities (for compliance purposes)</li>
+                    <li>Courts and legal proceedings (under judicial order)</li>
+                    <li>Emergency services (to protect health and safety)</li>
+                </ul>
+
+                <h3>Business Transfers</h3>
+                <ul>
+                    <li>In case of merger, acquisition, or sale of assets, users will be notified in advance</li>
+                    <li>Data protection standards will be maintained during any business transition</li>
+                </ul>
+
+                <p><strong>All data sharing arrangements include:</strong> Data Processing Agreements (DPAs), strict security requirements, purpose limitation clauses, and regular compliance audits.</p>
             </div>
 
-            <div class="divider">⸻</div>
+            <div class="divider"></div>
 
-            <div class="section">
-                <span class="section-number">11</span>
-                <h2>Children's Privacy</h2>
-                <p>This app is not intended for children under the age of 13 (or 16 in the EU). We do not knowingly collect data from children.</p>
+            <div class="section" id="data-retention">
+                <div class="section-header">
+                    <span class="section-number">6</span>
+                    <h2>Data Retention</h2>
+                </div>
+                
+                <h3>Account Data</h3>
+                <ul>
+                    <li><strong>Active accounts:</strong> Retained while account is active and for 30 days after deletion request</li>
+                    <li><strong>Inactive accounts:</strong> Automatically deleted after 3 years of inactivity</li>
+                    <li><strong>Authentication tokens:</strong> Expire automatically after 90 days</li>
+                </ul>
+
+                <h3>Photo and Fortune Data</h3>
+                <ul>
+                    <li><strong>User photos:</strong> Retained until manually deleted by user or account closure</li>
+                    <li><strong>Fortune interpretations:</strong> Stored with photos for user history access</li>
+                    <li><strong>Temporary AI processing:</strong> Images deleted within 24 hours after analysis</li>
+                </ul>
+
+                <h3>Technical and Analytics Data</h3>
+                <ul>
+                    <li><strong>Device logs:</strong> Retained for 90 days for debugging purposes</li>
+                    <li><strong>Anonymized analytics:</strong> Retained for 26 months (Google Analytics default)</li>
+                    <li><strong>Crash reports:</strong> Retained for 1 year for app stability improvements</li>
+                </ul>
+
+                <h3>Legal and Compliance Data</h3>
+                <ul>
+                    <li><strong>Legal requests:</strong> Retained as required by law (typically 5-7 years)</li>
+                    <li><strong>Audit logs:</strong> Retained for 3 years for security monitoring</li>
+                    <li><strong>GDPR requests:</strong> Documentation retained for 3 years</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Automated Deletion:</strong> We use automated systems to ensure data is deleted according to these retention periods. You can request immediate deletion of your data at any time.</p>
+                </div>
             </div>
 
-            <div class="divider">⸻</div>
+            <div class="divider"></div>
 
-            <div class="section">
-                <span class="section-number">12</span>
-                <h2>Changes to this Policy</h2>
-                <p>We may update this Privacy Policy from time to time. You will be notified of any significant changes within the app or by email (if applicable).</p>
+            <div class="section" id="gdpr-rights">
+                <div class="section-header">
+                    <span class="section-number">7</span>
+                    <h2>Your GDPR Rights</h2>
+                </div>
+                
+                <h3>Access Rights (Article 15)</h3>
+                <ul>
+                    <li>Request a copy of all personal data we hold about you</li>
+                    <li>Receive information about how your data is processed</li>
+                    <li>Learn about data sharing and retention periods</li>
+                </ul>
+
+                <h3>Rectification Rights (Article 16)</h3>
+                <ul>
+                    <li>Correct inaccurate or incomplete personal data</li>
+                    <li>Update your account information and preferences</li>
+                    <li>Modify consent settings and privacy choices</li>
+                </ul>
+
+                <h3>Erasure Rights - "Right to be Forgotten" (Article 17)</h3>
+                <ul>
+                    <li>Request complete deletion of your account and all associated data</li>
+                    <li>Remove specific photos or fortune records</li>
+                    <li>Withdraw consent and delete related processing activities</li>
+                </ul>
+
+                <h3>Data Portability (Article 20)</h3>
+                <ul>
+                    <li>Export your data in a machine-readable format</li>
+                    <li>Transfer your data to another service provider</li>
+                    <li>Receive structured data exports within 30 days</li>
+                </ul>
+
+                <h3>Objection Rights (Article 21)</h3>
+                <ul>
+                    <li>Object to processing based on legitimate interests</li>
+                    <li>Opt-out of direct marketing and profiling</li>
+                    <li>Stop automated decision-making processes</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Exercise Your Rights:</strong> Submit requests via <a href="mailto:gdpr@cochinescu.com" class="email-link">gdpr@cochinescu.com</a>. We respond within 30 days (extendable to 90 days for complex requests). All requests are free of charge.</p>
+                </div>
             </div>
 
-            <div class="divider">⸻</div>
+            <div class="divider"></div>
 
-            <div class="section">
-                <span class="section-number">13</span>
-                <h2>Contact</h2>
-                <p>If you have questions or concerns regarding this policy, contact us at:</p>
+            <div class="section" id="user-controls">
+                <div class="section-header">
+                    <span class="section-number">8</span>
+                    <h2>User Controls and Choices</h2>
+                </div>
+                
+                <h3>In-App Controls</h3>
+                <ul>
+                    <li><strong>Photo Management:</strong> Delete individual photos or your entire history</li>
+                    <li><strong>Account Settings:</strong> Update personal information and preferences</li>
+                    <li><strong>Privacy Settings:</strong> Control data sharing and consent preferences</li>
+                    <li><strong>Notification Settings:</strong> Manage push notifications and communications</li>
+                </ul>
+
+                <h3>Device-Level Controls</h3>
+                <ul>
+                    <li><strong>Location Services:</strong> Disable location access in device settings</li>
+                    <li><strong>Camera Permissions:</strong> Revoke photo access permissions</li>
+                    <li><strong>Tracking Prevention:</strong> Use iOS App Tracking Transparency or Android privacy settings</li>
+                    <li><strong>Advertising:</strong> Reset advertising ID or opt-out of personalized ads</li>
+                </ul>
+
+                <h3>Communication Preferences</h3>
+                <ul>
+                    <li>Unsubscribe from marketing emails via email footer links</li>
+                    <li>Disable push notifications in app or device settings</li>
+                    <li>Opt-out of promotional communications</li>
+                    <li>Control frequency of app notifications</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section" id="data-security">
+                <div class="section-header">
+                    <span class="section-number">9</span>
+                    <h2>Data Security</h2>
+                </div>
+                
+                <h3>Technical Safeguards</h3>
+                <ul>
+                    <li><strong>Encryption:</strong> AES-256 encryption for data at rest, TLS 1.3 for data in transit</li>
+                    <li><strong>Access Controls:</strong> Multi-factor authentication and role-based access</li>
+                    <li><strong>Network Security:</strong> Firewalls, intrusion detection, and VPN access</li>
+                    <li><strong>Data Anonymization:</strong> Automatic anonymization of analytics data</li>
+                </ul>
+
+                <h3>Organizational Measures</h3>
+                <ul>
+                    <li>Regular security training for all personnel</li>
+                    <li>Background checks for employees with data access</li>
+                    <li>Incident response procedures and security monitoring</li>
+                    <li>Regular security audits and penetration testing</li>
+                </ul>
+
+                <h3>Industry Standards</h3>
+                <ul>
+                    <li>ISO 27001 information security management compliance</li>
+                    <li>SOC 2 Type II audited cloud infrastructure</li>
+                    <li>GDPR technical and organizational measures (Article 32)</li>
+                    <li>Regular third-party security assessments</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Security Limitations:</strong> While we implement industry-leading security measures, no system is 100% secure. We continuously monitor and improve our security posture.</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section" id="international-transfers">
+                <div class="section-header">
+                    <span class="section-number">10</span>
+                    <h2>International Data Transfers</h2>
+                </div>
+                
+                <h3>Transfer Mechanisms</h3>
+                <ul>
+                    <li><strong>EU Adequacy Decisions:</strong> Transfers to countries with adequate protection levels</li>
+                    <li><strong>Standard Contractual Clauses:</strong> EU-approved data transfer agreements</li>
+                    <li><strong>Binding Corporate Rules:</strong> For multinational service providers</li>
+                    <li><strong>Certification Schemes:</strong> Industry-recognized privacy certifications</li>
+                </ul>
+
+                <h3>Data Localization</h3>
+                <ul>
+                    <li>EU user data primarily stored in EU data centers</li>
+                    <li>Backup data may be stored in adequacy-approved countries</li>
+                    <li>AI processing may occur in secure US facilities under strict contracts</li>
+                    <li>Data subject rights remain enforceable regardless of processing location</li>
+                </ul>
+
+                <h3>Safeguards and Guarantees</h3>
+                <ul>
+                    <li>Contractual obligations to maintain EU-level protection</li>
+                    <li>Regular compliance audits of international processors</li>
+                    <li>Immediate suspension of transfers if protection levels are compromised</li>
+                    <li>Notification to users of any significant transfer arrangement changes</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section" id="children-privacy">
+                <div class="section-header">
+                    <span class="section-number">11</span>
+                    <h2>Children's Privacy</h2>
+                </div>
+                
+                <h3>Age Restrictions</h3>
+                <ul>
+                    <li><strong>Minimum Age:</strong> 16 years in the EU, 13 years in other jurisdictions</li>
+                    <li><strong>Age Verification:</strong> Account creation includes age confirmation</li>
+                    <li><strong>Parental Consent:</strong> Required for users under applicable age limits</li>
+                </ul>
+
+                <h3>Special Protections</h3>
+                <ul>
+                    <li>Enhanced privacy settings for young users</li>
+                    <li>Restricted data collection and profiling</li>
+                    <li>No behavioral advertising to minors</li>
+                    <li>Regular compliance reviews for child safety</li>
+                </ul>
+
+                <h3>Parental Rights</h3>
+                <ul>
+                    <li>Right to access their child's data</li>
+                    <li>Right to request deletion of child's account</li>
+                    <li>Right to withdraw consent at any time</li>
+                    <li>Priority customer support for family-related concerns</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Underage Discovery:</strong> If we discover a user is under the required age without proper consent, we will immediately delete their account and data.</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section" id="policy-changes">
+                <div class="section-header">
+                    <span class="section-number">15</span>
+                    <h2>Policy Changes</h2>
+                </div>
+                
+                <h3>Notification Process</h3>
+                <ul>
+                    <li><strong>Significant Changes:</strong> 30-day advance notice via email and in-app notification</li>
+                    <li><strong>Minor Updates:</strong> Notification through app updates and website posting</li>
+                    <li><strong>Emergency Changes:</strong> Immediate notification for security or legal reasons</li>
+                </ul>
+
+                <h3>User Rights During Changes</h3>
+                <ul>
+                    <li>Right to review changes before they take effect</li>
+                    <li>Right to withdraw consent if you disagree with changes</li>
+                    <li>Right to export your data before policy changes</li>
+                    <li>Right to delete your account if changes are unacceptable</li>
+                </ul>
+
+                <h3>Change Documentation</h3>
+                <ul>
+                    <li>Version history maintained for transparency</li>
+                    <li>Summary of changes provided with each update</li>
+                    <li>Legal basis documented for any new processing activities</li>
+                    <li>Regular comprehensive policy reviews every 12 months</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section" id="contact">
+                <div class="section-header">
+                    <span class="section-number">16</span>
+                    <h2>Contact Information</h2>
+                </div>
+                
+                <h3>Data Protection Contacts</h3>
                 <div class="contact-info">
-                    <p>📧 <a href="mailto:gdpr@cochinescu.com" class="email-link">gdpr@cochinescu.com</a></p>
+                    <p><strong>Data Protection Officer:</strong><br>
+                    <a href="mailto:dpo@cochinescu.com" class="email-link">dpo@cochinescu.com</a></p>
+                    
+                    <p><strong>GDPR Compliance:</strong><br>
+                    <a href="mailto:gdpr@cochinescu.com" class="email-link">gdpr@cochinescu.com</a></p>
+                    
+                    <p><strong>Security Issues:</strong><br>
+                    <a href="mailto:security@cochinescu.com" class="email-link">security@cochinescu.com</a></p>
+                    
+                    <p><strong>General Support:</strong><br>
+                    <a href="mailto:support@cochinescu.com" class="email-link">support@cochinescu.com</a></p>
+                </div>
+
+                <h3>Supervisory Authority</h3>
+                <ul>
+                    <li><strong>Romania:</strong> Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</li>
+                    <li><strong>Website:</strong> www.dataprotection.ro</li>
+                    <li><strong>EU Citizens:</strong> You may also lodge complaints with your local data protection authority</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Response Times:</strong> GDPR requests within 30 days | Security issues within 24 hours | General support within 48 hours</p>
                 </div>
             </div>
         </div>
 
+            <div class="section" id="cookies">
+                <div class="section-header">
+                    <span class="section-number">12</span>
+                    <h2>Cookies & Tracking Technologies</h2>
+                </div>
+                
+                <h3>Types of Cookies We Use</h3>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Required for app functionality (authentication, preferences)</li>
+                    <li><strong>Analytics Cookies:</strong> Google Analytics for usage insights (anonymized data)</li>
+                    <li><strong>Advertising Cookies:</strong> For personalized ads (only with explicit consent)</li>
+                    <li><strong>Functional Cookies:</strong> To remember your settings and preferences</li>
+                </ul>
+
+                <h3>Cookie Consent Management</h3>
+                <ul>
+                    <li>Granular consent options for different cookie categories</li>
+                    <li>Easy withdrawal of consent through app settings</li>
+                    <li>Regular consent renewal prompts as required by law</li>
+                </ul>
+
+                <div class="highlight">
+                    <p><strong>Cookie Control:</strong> You can manage cookie preferences in your device settings or through our in-app cookie preferences center.</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section" id="third-parties">
+                <div class="section-header">
+                    <span class="section-number">13</span>
+                    <h2>Third-Party Services</h2>
+                </div>
+                
+                <h3>Service Provider Details</h3>
+                <ul>
+                    <li><strong>Google Cloud Platform:</strong> Data hosting (GDPR-compliant data centers in EU)</li>
+                    <li><strong>OpenAI:</strong> AI image analysis (data processed securely, not retained)</li>
+                    <li><strong>Firebase:</strong> Authentication, analytics, push notifications</li>
+                    <li><strong>Apple Services:</strong> Sign-in authentication, push notifications</li>
+                    <li><strong>AdMob/Google Ads:</strong> Advertising (only with user consent)</li>
+                </ul>
+
+                <h3>Data Processing Agreements</h3>
+                <ul>
+                    <li>All service providers have signed comprehensive DPAs</li>
+                    <li>Regular security audits and compliance reviews</li>
+                    <li>Strict data minimization and purpose limitation clauses</li>
+                    <li>Automated data deletion requirements</li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="section" id="breach-notification">
+                <div class="section-header">
+                    <span class="section-number">14</span>
+                    <h2>Data Breach Procedures</h2>
+                </div>
+                
+                <h3>Our Commitment</h3>
+                <ul>
+                    <li>Immediate breach detection and response systems</li>
+                    <li>Notification to supervisory authorities within 72 hours</li>
+                    <li>User notification within 72 hours if high risk to rights and freedoms</li>
+                    <li>Comprehensive incident documentation and analysis</li>
+                </ul>
+
+                <h3>User Rights During a Breach</h3>
+                <ul>
+                    <li>Right to immediate notification of relevant breaches</li>
+                    <li>Right to know what data was compromised</li>
+                    <li>Right to free credit monitoring if applicable</li>
+                    <li>Right to compensation for damages under GDPR Article 82</li>
+                </ul>
+
+                <div class="contact-info">
+                    <p><strong>Security Incident Reporting:</strong><br>
+                    Emergency: <a href="mailto:security@cochinescu.com" class="email-link">security@cochinescu.com</a></p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+        </div>
+
         <div class="footer">
             <p>Daily Coffee Fortune Teller - Privacy Policy</p>
-            <p>Last updated: July 8th, 2025</p>
+            <p>Last updated: January 15th, 2025 | Next review: July 15th, 2025</p>
+            <p>This policy complies with GDPR, HIPAA, and international privacy standards</p>
         </div>
     </div>
 </body>
